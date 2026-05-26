@@ -1,108 +1,158 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فروشگاه لوازم جانبی | واردات مستقیم از چین</title>
+    <title>موبوچین | لوازم جانبی موبایل بدون واسطه</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/vazirmatn@30.1.0/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="container navbar">
-            <div class="logo">CHINA<span>ACCESSORY</span></div>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="flag-icon">🇨🇳</span>
+                <h1>موبو<span>چین</span></h1>
+            </div>
+            
             <nav>
-                <ul>
-                    <li><a href="#home">خانه</a></li>
-                    <li><a href="#products">محصولات</a></li>
-                    <li><a href="#features">چرا ما؟</a></li>
-                    <li><a href="#contact">ارتباط با ما</a></li>
-                </ul>
+                <a href="#products">محصولات</a>
+                <a href="#features">چرا موبوچین؟</a>
+                <a href="#about">درباره ما</a>
             </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="تغییر پوسته">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-icon-wrapper" id="cart-trigger">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero-section">
-        <div class="container hero-content">
-            <h1>مستقیم و بی‌واسطه از <span class="highlight">چین</span> خرید کنید</h1>
-            <p>عرضه انواع گلس‌های پرایوسی، سرامیکی و شفاف به همراه لوکس‌ترین کاورها برای تمامی مدل‌های گوشی با قیمت رقابتی و کیفیت تضمین‌شده.</p>
-            <a href="#products" class="btn">مشاهده محصولات</a>
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">واردات مستقیم و بدون واسطه از چین <span class="flag-mini">🇨🇳</span></div>
+                <h2>کیفیت اورجینال، <br>قیمت کف بازار کشور!</h2>
+                <p>انواع گلس‌های پرایوسی، سرامیکی، شفاف و کاورهای ترند روز برای تمامی مدل‌های آیفون، سامسونگ، شیائومی و...</p>
+                <a href="#products" class="btn-primary">مشاهده و خرید آنلاین</a>
+            </div>
+            <div class="hero-image">
+                <div class="glow-effect"></div>
+                <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=600" alt="Mobile Accessories">
+            </div>
         </div>
     </section>
 
-    <section id="features" class="features-section">
-        <div class="container features-grid">
+    <section class="features" id="features">
+        <div class="container grid-3">
             <div class="feature-card">
-                <div class="icon">✈️</div>
+                <i class="fas fa-ship"></i>
                 <h3>مستقیم از چین</h3>
-                <p>حذف کامل واسطه‌ها و خرید مستقیم از کارخانه</p>
+                <p>حذف تمامی واسطه‌ها و دلالان، خرید مستقیم از کارخانجات معتبر گوانگجو.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">💎</div>
-                <h3>کیفیت عالی</h3>
-                <p>تضمین بالاترین کیفیت متریال گلس و کاور</p>
+                <i class="fas fa-tags"></i>
+                <h3>تضمین بهترین قیمت</h3>
+                <p>به دلیل واردات عمده، قیمت‌ها رقابتی و کاملاً منصفانه در نظر گرفته شده است.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">💰</div>
-                <h3>قیمت مناسب</h3>
-                <p>بهترین قیمت بازار به دلیل واردات انبوه و مستقیم</p>
+                <i class="fas fa-shield-halved"></i>
+                <h3>تضمین کیفیت کالا</h3>
+                <p>استفاده از متریال درجه یک؛ گلس‌های ضدضربه واقعی و کاورهای ضد زردی.</p>
             </div>
         </div>
     </section>
 
-    <section id="products" class="products-section">
+    <section class="products-section" id="products">
         <div class="container">
-            <h2 class="section-title">محصولات متمایز ما</h2>
-            <div class="products-grid">
+            <div class="section-title">
+                <h2>فروشگاه تخصصی لوازم جانبی</h2>
+                <p>از منوی زیر دسته‌بندی و مدل گوشی خود را انتخاب کنید</p>
+            </div>
+
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label>دسته‌بندی:</label>
+                    <div class="filter-options" id="category-filters">
+                        <button class="filter-btn active" data-filter="all">همه محصولات</button>
+                        <button class="filter-btn" data-filter="glass-privacy">گلس پرایوسی</button>
+                        <button class="filter-btn" data-filter="glass-ceramic">گلس سرامیکی</button>
+                        <button class="filter-btn" data-filter="glass-clear">گلس شفاف</button>
+                        <button class="filter-btn" data-filter="case">کاور و قاب</button>
+                    </div>
+                </div>
                 
-                <div class="product-card">
-                    <div class="badge">ویژه</div>
-                    <h3>گلس پرایوسی (Privacy)</h3>
-                    <p>محافظت از حریم شخصی و صفحه نمایش در برابر خط و خش و نگاه‌های کنجکاو.</p>
-                    <span class="tag">انواع گوشی‌ها</span>
+                <div class="filter-group">
+                    <label>برند گوشی:</label>
+                    <div class="filter-options" id="brand-filters">
+                        <button class="filter-btn active" data-filter="all">همه برندها</button>
+                        <button class="filter-btn" data-filter="apple">آیفون (Apple)</button>
+                        <button class="filter-btn" data-filter="samsung">سامسونگ</button>
+                        <button class="filter-btn" data-filter="xiaomi">شیائومی</button>
+                    </div>
                 </div>
-
-                <div class="product-card">
-                    <div class="badge">نشکن</div>
-                    <h3>گلس سرامیکی</h3>
-                    <p>انعطاف‌پذیری فوق‌العاده بالا و ضد ضربه واقعی بدون ترک خوردگی لبه‌ها.</p>
-                    <span class="tag">مقاومت بالا</span>
-                </div>
-
-                <div class="product-card">
-                    <h3>گلس شفاف HD</h3>
-                    <p>وضوح ۱۰۰٪ و بدون افت کیفیت تاچ، کاملاً بی‌رنگ با پوشش لب به لب.</p>
-                    <span class="tag">شفافیت بالا</span>
-                </div>
-
-                <div class="product-card">
-                    <div class="badge hot">جدید</div>
-                    <h3>کاور و قاب گوشی</h3>
-                    <p>انواع کاورهای فانتزی، سیلیکونی و ضدضربه برای تمامی مدل‌های آیفون، سامسونگ و شیائومی.</p>
-                    <span class="tag">تنوع بی‌نظیر</span>
-                </div>
-
             </div>
+
+            <div class="products-grid" id="products-wrapper">
+                </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>ثبت سفارش و مشاوره خرید</h2>
-            <p>برای استعلام قیمت عمده و تک، و همچنین هماهنگی سفارش با ما در ارتباط باشید.</p>
-            <div class="contact-buttons">
-                <a href="#" class="btn telegram">ارتباط در تلگرام</a>
-                <a href="#" class="btn whatsapp">ارتباط در واتس‌پاپ</a>
-            </div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>سبد خرید شما</h3>
+            <button id="cart-close"><i class="fas fa-times"></i></button>
         </div>
-    </section>
+        <div class="cart-items" id="cart-items-container">
+            <div class="empty-cart">سبد خرید شما در حال حاضر خالی است.</div>
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="total-price-box">
+                <span>جمع کل:</span>
+                <span id="cart-total-price">۰ تومان</span>
+            </div>
+            <button class="btn-checkout" onclick="alert('اتصال به درگاه پرداخت در محیط گیت‌هاب پیجز غیرفعال است.')">تکمیل فرآیند خرید</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
 
     <footer>
-        <div class="container">
-            <p>© ۲۰۲۶ تمامی حقوق محفوظ است | Designed by REZA</p>
+        <div class="container footer-grid">
+            <div>
+                <h3>موبوچین</h3>
+                <p>بزرگترین مرجع واردات مستقیم لوازم جانبی موبایل از چین بدون واسطه و با سود حداقلی.</p>
+            </div>
+            <div>
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="#products">لیست گلس‌ها</a></li>
+                    <li><a href="#products">کاور و قاب‌ها</a></li>
+                    <li><a href="#features">شرایط ارسال</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>ارتباط با ما</h3>
+                <p><i class="fas fa-phone"></i> پشتیبانی تلفنی و تلگرام ۲۴ ساعته</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© ۲۰۲۶ موبوچین | طراحی شده برای وب‌سایت‌های مدرن گیت‌هاب</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
